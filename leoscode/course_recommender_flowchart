@@ -1,0 +1,20 @@
+// Course Similarity-Based Recommender System
+digraph {
+	start [label=Start]
+	load_data [label="Load Course Data"]
+	preprocess_data [label="Preprocess Data (Tokenization, Stopwords, Stemming)"]
+	create_bow [label="Create Bag-of-Words (BoW) Representations"]
+	calculate_similarity [label="Calculate Cosine Similarity"]
+	filter_courses [label="Filter Courses by Similarity Threshold"]
+	rank_courses [label="Rank Courses by Similarity Score"]
+	recommend_courses [label="Recommend Top N Courses"]
+	end [label=End]
+	start -> load_data
+	load_data -> preprocess_data
+	preprocess_data -> create_bow
+	create_bow -> calculate_similarity
+	calculate_similarity -> filter_courses
+	filter_courses -> rank_courses
+	rank_courses -> recommend_courses
+	recommend_courses -> end
+}

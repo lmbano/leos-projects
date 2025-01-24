@@ -1,0 +1,23 @@
+// Content-Based Recommender System
+digraph {
+	A [label="Raw Data"]
+	B [label="Data Preprocessing"]
+	C [label="Feature Engineering"]
+	D [label="User Profile Vectors"]
+	E [label="Course Genre Vectors"]
+	F [label="Similarity Calculation"]
+	G [label="Recommendation Generation"]
+	H [label="Trained Model"]
+	I [label="User Input"]
+	J [label="Recommended Courses"]
+	A -> B
+	B -> C
+	C -> D
+	C -> E
+	D -> F
+	E -> F
+	F -> G
+	G -> H
+	I -> D
+	H -> J
+}
